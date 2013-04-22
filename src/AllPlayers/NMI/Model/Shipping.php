@@ -44,6 +44,17 @@ class Shipping
     protected $address;
 
     /**
+     * Returns the currently set shipping address.
+     *
+     * @return Address
+     *   Address of the person or organization that the sale will be shipped to.
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
      * Sets the shipping address.
      *
      * @param Address $address
