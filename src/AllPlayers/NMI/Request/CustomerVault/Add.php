@@ -75,6 +75,17 @@ class Add implements Request
     protected $type = 'add_customer';
 
     /**
+     * Returns the currently set billing details for this customer.
+     *
+     * @return Billing
+     *   Billing details for this customer.
+     */
+    public function getBillingDetails()
+    {
+        return $this->billingDetails;
+    }
+
+    /**
      * Sets the billing details for the customer.
      *
      * @param Billing $billing
@@ -86,6 +97,17 @@ class Add implements Request
     }
 
     /**
+     * Returns the currently set payment method for this customer.
+     *
+     * @return PaymentMethod
+     *   Payment method used for this customer.
+     */
+    public function getPaymentMethod()
+    {
+        return $this->paymentMethod;
+    }
+
+    /**
      * Sets the payment method for the customer.
      *
      * @param PaymentMethod $method
@@ -94,6 +116,17 @@ class Add implements Request
     public function setPaymentMethod(PaymentMethod $method)
     {
         $this->paymentMethod = $method;
+    }
+
+    /**
+     * Returns the currently set shipping details for this customer.
+     *
+     * @return Shipping
+     *   Shipping details for this customer.
+     */
+    public function getShippingDetails()
+    {
+        return $this->shippingDetails;
     }
 
     /**

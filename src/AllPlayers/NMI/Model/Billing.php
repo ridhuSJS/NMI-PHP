@@ -60,6 +60,17 @@ class Billing
     protected $address;
 
     /**
+     * Returns the currently set billing address.
+     *
+     * @return Address
+     *   Address of the person or organization to be billed for the transaction.
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
      * Sets the billing address.
      *
      * @param Address $address

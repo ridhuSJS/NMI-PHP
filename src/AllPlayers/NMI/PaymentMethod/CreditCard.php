@@ -41,6 +41,17 @@ class CreditCard implements PaymentMethod
     protected $type = 'creditcard';
 
     /**
+     * Returns the currently set expiration.
+     *
+     * @return DateTime
+     *   The expiration date of the credit card.
+     */
+    public function getExpiration()
+    {
+        return $this->expiration;
+    }
+
+    /**
      * Sets the expiration date for the credit card.
      *
      * @param DateTime $expiration

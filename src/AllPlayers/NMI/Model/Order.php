@@ -40,6 +40,17 @@ class Order
     }
 
     /**
+     * Returns the currently set order date.
+     *
+     * @return DateTime
+     *   The date of the order.
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
      * Sets the order date.
      *
      * @param DateTime $date

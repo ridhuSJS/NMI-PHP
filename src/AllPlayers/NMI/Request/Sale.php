@@ -125,6 +125,17 @@ class Sale implements Request
     protected $type = 'sale';
 
     /**
+     * Returns the currently set billing details for this sale.
+     *
+     * @return Billing
+     *   Billing details for this sale.
+     */
+    public function getBillingDetails()
+    {
+        return $this->billingDetails;
+    }
+
+    /**
      * Sets the billing details for the sale.
      *
      * @param Billing $billing
@@ -133,6 +144,17 @@ class Sale implements Request
     public function setBillingDetails(Billing $billing)
     {
         $this->billingDetails = $billing;
+    }
+
+    /**
+     * Returns the currently set order for this sale.
+     *
+     * @return Order
+     *   The order that corresponds to this sale.
+     */
+    public function getOrder()
+    {
+        return $this->order;
     }
 
     /**
@@ -147,6 +169,17 @@ class Sale implements Request
     }
 
     /**
+     * Returns the currently set payment method for this sale.
+     *
+     * @return PaymentMethod
+     *   Payment method used for this sale.
+     */
+    public function getPaymentMethod()
+    {
+        return $this->paymentMethod;
+    }
+
+    /**
      * Sets the payment method for the sale.
      *
      * @param PaymentMethod $method
@@ -155,6 +188,17 @@ class Sale implements Request
     public function setPaymentMethod(PaymentMethod $method)
     {
         $this->paymentMethod = $method;
+    }
+
+    /**
+     * Returns the currently set shipping details for this sale.
+     *
+     * @return Shipping
+     *   Shipping details for this sale.
+     */
+    public function getShippingDetails()
+    {
+        return $this->shippingDetails;
     }
 
     /**
